@@ -83,7 +83,7 @@ def insert_provider(file: str, file_provider: str):
                 if "</receiver>" in line:
                     file_provider_line = ind + 1
                 if ind == file_provider_line:
-                    line = line.replace(line, fp.read())
+                    line = line.replace(line, f"{line}\n{fp.read()}")
                 print(line, end='')
 
 
